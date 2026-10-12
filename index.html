@@ -145,26 +145,10 @@ src="https://www.facebook.com/tr?id=2485919238538903&ev=PageView&noscript=1"
 <footer class="lp-foot"><small>© 2026 Documenti.ge · <a href="https://documenti.ge/politika.html" target="_blank" rel="noopener">Политика конфиденциальности</a></small></footer>
 <script>
 (function(){
-  var UTM_KEYS=['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
-  var qs=new URLSearchParams(location.search);
-  var utm={};
-  UTM_KEYS.forEach(function(k){ var v=qs.get(k); if(v)utm[k]=v; });
-  if(Object.keys(utm).length){
-    try{localStorage.setItem('dg_utm',JSON.stringify(utm));}catch(e){}
-  }else{
-    try{ var stored=localStorage.getItem('dg_utm'); if(stored)utm=JSON.parse(stored); }catch(e){}
-  }
   var link=document.querySelector('.lp-btn-tg');
-  if(link && Object.keys(utm).length){
-    var parts=[]; UTM_KEYS.forEach(function(k){ if(utm[k])parts.push(k+'='+utm[k]); });
-    var url=new URL(link.href);
-    url.searchParams.set('text', decodeURIComponent(url.searchParams.get('text')) + '\nИсточник: ' + parts.join(', '));
-    link.href=url.toString();
-  }
   if(link){
     link.addEventListener('click',function(){
       var params={method:'telegram',page:'lp_ptd'};
-      UTM_KEYS.forEach(function(k){ if(utm[k])params[k]=utm[k]; });
       if(window.gtag){ gtag('event','contact_click',params); gtag('event','generate_lead',params); }
       if(window.fbq)fbq('track','Lead',params);
     });
