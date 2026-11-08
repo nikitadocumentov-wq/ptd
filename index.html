@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="ru"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ПТД в Грузии — Documenti.ge</title>
-<meta name="description" content="С 1 марта 2026 года ПТД обязателен для работы в Грузии и подачи на ВНЖ. Берём подачу на себя: документы, анкета по новым требованиям и подготовка к видеоинтервью">
+<meta name="description" content="С 1 марта 2026 года ПТД обязателен для работы в Грузии и подачи на ВНЖ. Берём подачу на себя: документы и подача анкеты по новым требованиям">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
@@ -123,19 +123,19 @@ src="https://www.facebook.com/tr?id=2485919238538903&ev=PageView&noscript=1"
   <h1 class="lp-h1">ПТД в Грузии</h1>
   <p class="lp-subtitle">Разрешение на работу — <span class="blink">ОБЯЗАТЕЛЬНО ДЛЯ ПОДАЧИ НА ВНЖ</span></p>
   <div class="lp-social">Нас выбрали <b>420+ клиентов</b> в этом году</div>
-  <p class="lp-demand">С 1 марта 2026 года ПТД обязателен для работы в Грузии и подачи на ВНЖ. Берём подачу на себя: документы, анкета по новым требованиям и подготовка к видео-интервью.</p>
+  <p class="lp-demand">С 1 марта 2026 года ПТД обязателен для работы в Грузии и подачи на ВНЖ. Берём подачу на себя: документы и подача анкеты по новым требованиям.</p>
 
   <h2 class="lp-h2">Как мы оформляем ПТД</h2>
-  <ol class="lp-steps"><li>Собираем документы (паспорт, ВНЖ, образование, опыт, языки), скачиваем нужное из rs.ge.</li><li>Заполняем анкету по новым требованиям 2026 года и подаём — подтверждение приходит на ваш email.</li><li>Готовим вас к видео-интервью с агентством занятости: даём список реальных вопросов и техническую инструкцию.</li></ol>
+  <ol class="lp-steps"><li>Собираем документы (паспорт, ВНЖ, образование, опыт, языки), скачиваем нужное из налоговой или с гос. сайтов.</li><li>Заполняем анкету по новым требованиям 2026 года и подаём — подтверждение приходит на ваш email.</li><li>Отправляем инструкцию для подключения к видео-интервью с агентством занятости и список примерных вопросов.</li></ol>
 
   <div class="lp-extra">
     <div class="lp-extra-lbl">Дополнительно</div>
-    <p>Переводчик на видео-интервью. Приезжайте к переводчику в назначенное время: <b>Батуми</b> — 100 ₾, <b>Тбилиси</b> — 150 ₾.</p>
+    <p>Предлагаем переводчика на видео-интервью. Приезжайте к переводчику в назначенное время: <b>Батуми</b> — 100 ₾, <b>Тбилиси</b> — 150 ₾.</p>
   </div>
 
   <div class="lp-cta">
     <p class="lp-offer">Одно сообщение — и скидка 5% навсегда!</p>
-    <a href="#" onclick="openTG(event)" class="lp-btn lp-btn-tg" target="_blank" rel="noopener">
+    <a href="#" class="lp-btn lp-btn-tg" target="_blank" rel="noopener" onclick="openTG(event)">
       <span>Связаться в Telegram</span><span class="arr">↗</span>
     </a>
     <p class="lp-offer-note">Нажимая кнопку, откроется сообщение с вашим промокодом. Отправьте его и станьте участником программы лояльности Documenti. Получите <b>−5% на услуги после первой</b> в программе лояльности.</p>
@@ -143,25 +143,21 @@ src="https://www.facebook.com/tr?id=2485919238538903&ev=PageView&noscript=1"
 
   <div class="lp-trust-mini">
     <div><b>15+</b>лет опыта<br>с Домами юстиции</div>
-    <div><b>3</b>Тбилиси · Батуми ·<br>Кутаиси + удалённо</div>
+    <div><b>3 <span style="font-weight:800;font-size:.8em">города</span></b>Батуми, Тбилиси,<br>Кутаиси + удалённо</div>
     <div><b>А→Я</b>сопровождаем<br>шаг за шагом</div>
   </div>
 </div></main>
 <footer class="lp-foot"><small>© 2026 Documenti.ge · <a href="https://documenti.ge/politika.html" target="_blank" rel="noopener">Политика конфиденциальности</a></small></footer>
 <script>
-(function(){
-  var link=document.querySelector('.lp-btn-tg');
-  if(link){
-    link.addEventListener('click',function(){
-      var params={method:'telegram',page:'lp_ptd'};
-      if(window.gtag){ gtag('event','contact_click',params); gtag('event','generate_lead',params); }
-      if(window.fbq)fbq('track','Lead',params);
-    });
-  }
+// UTM: сохраняем метки (для аналитики), в сообщение больше не добавляем
+(function() {
+  var p = new URLSearchParams(window.location.search);
+  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k) {
+    if (p.get(k)) sessionStorage.setItem(k, p.get(k));
+  });
 })();
-</script>
-<script>
-// Documenti CAPI: личный промокод + запись «код = клик по рекламе» в помощник (как на vnzh/ip)
+
+// Documenti CAPI: личный промокод + запись «код = клик по рекламе» в помощник
 var DG = { helper: 'https://documenti-capi.nikitadocumentov.workers.dev', prefix: 'PTD', pixel: '2485919238538903' };
 var DG_ABC = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 function dgStore(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
@@ -188,13 +184,18 @@ function dgSend(tries) {
 }
 dgSend(0);
 
-// Лид в пиксель и GA отправляет обработчик клика ниже (как раньше), здесь только открываем Telegram с промокодом
 function openTG(e) {
   e.preventDefault();
+  var params = {method: 'telegram', page: 'lp_ptd'};
+  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k) { var v = sessionStorage.getItem(k); if (v) params[k] = v; });
+  if (window.gtag) { gtag('event', 'contact_click', params); gtag('event', 'generate_lead', params); }
+  if (typeof fbq === 'function') fbq('track', 'Lead', params);
   var msg =
     'Здравствуйте! Хочу оформить ПТД (разрешение на работу) в Грузии.\n' +
     'Мой промокод: ' + dgCode + ' — хочу в программу лояльности.';
+
   window.open('https://t.me/documenti_ge?text=' + encodeURIComponent(msg), '_blank');
 }
 </script>
+
 </body></html>
